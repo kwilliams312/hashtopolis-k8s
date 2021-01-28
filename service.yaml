@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: plex
+spec:
+  ports:
+  - port: 32400
+    name: plex
+    targetPort: 32400
+  selector:
+    run: plex
+  type: LoadBalancer
